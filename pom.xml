@@ -15,4 +15,32 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+                <useSystemClassLoader>false</useSystemClassLoader>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+<profiles>
+<profile>
+     <id>gat-deploy</id>
+ <distributionManagement>
+    <repository>
+      <id>gat-releases</id>
+      <name>gat-releases</name>
+      <url>http://localhost:8081/nexus/content/repositories/gat-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>gat-snapshots</id>
+      <name>gat-snapshots</name>
+      <url>http://localhost:8081/nexus/content/repositories/gat-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+</profile>
+  </profiles>
 </project>
