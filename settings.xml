@@ -34,4 +34,7 @@
             </properties>
         </profile>
 </profiles>
+  <pluginGroups>
+    <pluginGroup>org.jacoco</pluginGroup>
+</pluginGroups>
 </settings>
