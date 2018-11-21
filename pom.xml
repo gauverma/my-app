@@ -28,6 +28,9 @@
             </goals>
           </execution>
         </executions>
+                    <configuration>
+                <useSystemClassLoader>false</useSystemClassLoader>
+            </configuration>
       </plugin>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
